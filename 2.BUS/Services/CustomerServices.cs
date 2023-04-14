@@ -36,14 +36,10 @@ namespace _2.BUS.Services
             return "Unsuccessful";
         }
 
-        public string DeleteCustomer(CustomerView p)
+        public string DeleteCustomer(Guid id)
         {
-            if (p == null)
-            {
-                return "Unsuccessful";
-            }
-            var KH = _iCustomerRepo.GetCustomerFromDB().FirstOrDefault(c => c.IdCustomer == p.IdCustomer);
-            if (_iCustomerRepo.DeleteCustomer(KH)) return "Successful";
+            if (_iCustomerRepo.DeleteCustomer(id))
+                return "Successful";
             return "Unsuccessful";
         }
 
