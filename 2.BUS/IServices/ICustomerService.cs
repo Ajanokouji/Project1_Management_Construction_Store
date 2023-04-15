@@ -12,7 +12,7 @@ namespace _2.BUS.IServices
 
         string AddCustomer(CustomerView p);
         string UpdateCustomer(CustomerView p);
-        string DeleteCustomer(CustomerView p);
+        string DeleteCustomer(Guid id);
         List<CustomerView> GetCustomerViews();
         List<string> GetGender();
     }
