@@ -11,7 +11,7 @@ namespace _1.DAL.IResponsitories
     {
         bool AddCustomer(Customer p);
         bool UpdateCustomer(Customer p);
-        bool DeleteCustomer(Customer p);
+        bool DeleteCustomer(Guid id);
         Customer GetById(Guid id);
         List<Customer> GetCustomerFromDB();
     }
