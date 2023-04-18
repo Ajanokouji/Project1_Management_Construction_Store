@@ -27,10 +27,9 @@ namespace _1.DAL.Responsitories
             return true;
         }
 
-        public bool DeleteCustomer(Customer p)
+        public bool DeleteCustomer(Guid id)
         {
-            if (p == null) return false;
-            var temp = _dbContext.Customers.FirstOrDefault(x => x.IdCustomer == p.IdCustomer);
+            var temp = _dbContext.Customers.FirstOrDefault(c => c.IdCustomer == id);
             _dbContext.Remove(temp);
             _dbContext.SaveChanges();
             return true;
