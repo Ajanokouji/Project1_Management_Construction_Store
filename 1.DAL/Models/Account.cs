@@ -29,5 +29,6 @@ namespace _1.DAL.Models
         [Required]
         [StringLength(100)]
         public string Password { get; set; }
+        //test
     }
 }
